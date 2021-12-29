@@ -1,0 +1,32 @@
+{
+  "name": "client-helper",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start:view": "cd src && cross-env NODE_ENV=develop && npm run start",
+    "start:host": "cross-env NODE_ENV=develop electron ./host/main.js",
+    "start": "npm run start:view & sleep 5s && npm run start:host"
+  },
+  "keywords": [
+    "Electron"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^16.0.5",
+    "electron-builder": "^22.14.5"
+  },
+  "dependencies": {
+    "cert-helper": "^1.0.1",
+    "electron-log": "^4.4.3",
+    "electron-store": "^8.0.1",
+    "glob": "^7.2.0",
+    "mobx": "^6.3.10",
+    "mobx-react": "^7.2.1",
+    "sudo-prompt": "^9.2.1",
+    "tdesign-react": "^0.21.0",
+    "whistle": "^2.8.9"
+  }
+}
